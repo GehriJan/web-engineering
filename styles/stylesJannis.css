@@ -1,0 +1,33 @@
+body {
+    background-image: url("../img/Aussicht.jpeg");
+    color: white;
+    font-family: "Comic Sans MS", serif;
+    max-width: 1200px;
+}
+h1{
+    position: fixed;
+    right: 100px;
+}
+h2 {
+    color: aqua;
+    border-style: dashed;
+    border-spacing: 10px;
+}
+p {
+    font-weight: lighter;
+}
+ul > li {
+    text-decoration-color: midnightblue;
+    width: 100%;
+    word-spacing: 8px;
+}
+#Bild {
+    position: fixed;
+    left: 40px;
+}
+img:hover {
+    opacity: 1.0;
+}
+img{
+    opacity: 0.5;
+}
