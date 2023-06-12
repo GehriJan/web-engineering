@@ -7,6 +7,10 @@ body {
 h1{
     position: fixed;
     right: 100px;
+    text-shadow: black;
+    word-spacing: 30px;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
 }
 h2 {
     color: aqua;
@@ -30,4 +34,10 @@ img:hover {
 }
 img{
     opacity: 0.5;
+}
+table:hover{
+    transform: rotateX(180deg);
+}
+td:hover{
+    transform: rotateZ(180deg);
 }
