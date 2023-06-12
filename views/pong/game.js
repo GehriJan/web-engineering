@@ -5,21 +5,8 @@ const paddleHeight = grid * 5;
 const maxPaddleY = canvas.height - grid - paddleHeight;
 const TO_RADIANS = Math.PI/180; 
 
-const config = {
-    paddle: {
-        speed: 6
-    },
-    ball: {
-        speed: 3
-    }
-}
-
-let data = {
-    points: {
-        left: 0,
-        right: 0
-    }
-}
+let paddleSpeed = 6;
+let ballSpeed = 3;
 
 
 let contactLeft = 0;
@@ -54,8 +41,8 @@ const ball = {
     // keep track of when need to reset the ball position
     resetting: false,
 
-    dx: config.ball.speed,
-    dy: -config.ball.speed
+    dx: ballSpeed,
+    dy: -ballSpeed
 };
 
 function collides(obj1, obj2) {
@@ -111,11 +98,6 @@ function loop() {
     if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
         ball.resetting = true;
 
-        if(ball.x < 0)
-            data.points.right++
-        else
-            data.points.left++
-
         // give some time for the player to recover before launching the ball again
         setTimeout(() => {
             ball.resetting = false;
@@ -153,10 +135,6 @@ function loop() {
     context.fillRect(0, 0, canvas.width, grid);
     context.fillRect(0, canvas.height - grid, canvas.width, canvas.height);
 
-    context.font = "30px Arial";
-    context.fillText(data.points.left, canvas.width / 2 - 50, 50)
-    context.fillText(data.points.right, canvas.width / 2 + 30, 50)
-
     // draw dotted line down the middle
     for (let i = grid; i < canvas.height - grid; i += grid * 2) {
         context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
@@ -184,15 +162,15 @@ function paintImage(context, image, angleInRad, positionX, positionY, axisX, axi
 
 document.addEventListener('keydown', function(e) {
     if (e.code === "ArrowUp") {
-        rightPaddle.dy = -config.paddle.speed;
+        rightPaddle.dy = -paddleSpeed;
     } else if (e.code === "ArrowDown") {
-        rightPaddle.dy = config.paddle.speed;
+        rightPaddle.dy = paddleSpeed;
     }
 
     if (e.code === "KeyW") {
-        leftPaddle.dy = -config.paddle.speed;
+        leftPaddle.dy = -paddleSpeed;
     } else if (e.code === "KeyS") {
-        leftPaddle.dy = config.paddle.speed;
+        leftPaddle.dy = paddleSpeed;
     }
 });
 
