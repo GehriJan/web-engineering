@@ -1,0 +1,32 @@
+#siegertreppe{
+    width: 40%;
+    min-width: 350px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 4fr;
+    grid-template-columns: 30% 30% 30%;
+    gap: 0.2em;
+    margin: auto;
+}
+#siegertreppe > .podiumsplatz{
+    border: medium solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 5em;
+    text-shadow: 2px 3px 4px black;
+    box-shadow: 5px 5px 10px dimgray;
+}
+#siegertreppe > #zweiterPlatz{
+    grid-row: 3/-1;
+    background-image: linear-gradient(to top, #969696, #a0a0a0, #ababab, #b5b5b5, #c0c0c0);
+    min-width: 100px;
+}
+#siegertreppe > #ersterPlatz{
+    grid-row: 2/-1;
+    background-image: linear-gradient(to top, #c9a800, #d6b400, #e4bf00, #f1cb00, #ffd700);
+    min-width: 100px;
+}
+#siegertreppe > #dritterPlatz{
+    grid-row: 4/-1;
+    background-image: linear-gradient(to top, #a96111, #b2681a, #bb7022, #c4772a, #cd7f32);
+    min-width: 100px;
+}

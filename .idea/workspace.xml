@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed07b1b-5cc5-49a5-991c-ee6e4b85a21a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/styles/tournamentPodium.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlternativerSpielplan.html" beforeDir="false" afterPath="$PROJECT_DIR$/AlternativerSpielplan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlternativerSpielplan16Teilnehmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/AlternativerSpielplan16Teilnehmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/stylesJannis.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Turnier2022.html" beforeDir="false" afterPath="$PROJECT_DIR$/Turnier2022.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +55,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +70,7 @@
       <updated>1685969242277</updated>
       <workItem from="1685969243411" duration="6545000" />
       <workItem from="1687128391386" duration="741000" />
+      <workItem from="1687441315042" duration="6574000" />
     </task>
     <servers />
   </component>
