@@ -1,3 +1,28 @@
-table, td {
-    border: 1px solid;
+@import './theme/theme.css';
+
+html {
+	scroll-behavior: smooth;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+    background: var(--bg);
+	color: var(--text);
+	margin: 0;
+	transition: all ease-in-out 0.35s;
+}
+
+a {
+	color: var(--text);
+}
+
+button {
+	padding: 0.2rem;
 }

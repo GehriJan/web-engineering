@@ -1,0 +1,13 @@
+@import 'scrollbar.css';
+@import 'darkmode.css';
+@import 'lightmode.css';
+
+:root {
+	--white: #ffffff;
+	--red: #ff0000;
+	--light_red: #ff6666;
+	--dark_red: #cc0000;
+	--black: #000000;
+
+	--font: "Raleway", sans-serif;
+}
