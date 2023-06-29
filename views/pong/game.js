@@ -7,10 +7,10 @@ const TO_RADIANS = Math.PI/180;
 
 const config = {
     paddle: {
-        speed: 6
+        speed: 8
     },
     ball: {
-        speed: 3
+        speed: 4
     }
 }
 
