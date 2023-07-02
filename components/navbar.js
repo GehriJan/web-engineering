@@ -87,68 +87,66 @@ customElements.define('custome-navbar', class extends HTMLElement {
         else
             document.body.classList.replace("light", "dark");
         
-        document.querySelector('#darkmode').textContent = document.body.classList[0].toUpperCase()
+        this.textContent = document.body.classList[0].toUpperCase()
     }
 
     connectedCallback() {
-		let nav = $('nav');
-        let line = nav.find('.line')
+        const nav = this.shadowRoot.querySelector("nav")
+        const line = nav.querySelector('.line')
 
-        let active = nav.find('.active');
+        let active = nav.querySelector('.active');
         let pos = 0;
         let wid = 0;
 
-        if(active.length) {
-            pos = active.position().left;
-            wid = active.width();
-            line.css({
-                left: pos,
-                width: wid
-            });
+        if(active) {
+            pos = active.offsetLeft
+            wid = active.offsetWidth
+
+            line.style.left = `${pos}px`
+            line.style.width = `${wid}px`;
         }
 
-        nav.find('ul li a').click(function(e) {
-        e.preventDefault();
-        if(!$(this).parent().hasClass('active') && !nav.hasClass('animate')) {
-            
-            nav.addClass('animate');
+        nav.querySelectorAll('ul li').forEach(element => {
+            element.addEventListener("click", function(e) {
+                e.preventDefault();
+                if(!e.target.parentElement.classList.contains('active') && !nav.classList.contains('animate')) {
+                    nav.classList.add('animate');
 
-            let _this = $(this);
+                    nav.querySelector('ul li.active').classList.remove('active');
+                    
+                    const target = e.target
+                    let position = target.offsetLeft
+                    let width = target.offsetWidth
 
-            nav.find('ul li').removeClass('active');
+                    if(position >= pos) {
+                        line.animate({
+                            width: `${((position - pos) + width)}px`
+                        }, 300).finished
+                        .then(() => {
+                            line.style.left = `${position}px`
+                            line.style.width = `${width}px`;
 
-            let position = _this.parent().position();
-            let width = _this.parent().width();
+                            target.classList.add('active');
+                            nav.classList.remove('animate');
+                        })
+                    } else {
+                        line.animate({
+                            left: `${position}px`,
+                            width: `${((pos - position) + wid)}px`,
+                        }, 300).finished
+                        .then(() => {
+                            line.style.left = `${position}px`
+                            line.style.width = `${width}px`;
 
-            if(position.left >= pos) {
-            line.animate({
-                width: ((position.left - pos) + width)
-            }, 300, function() {
-                line.animate({
-                width: width,
-                left: position.left
-                }, 150, function() {
-                nav.removeClass('animate');
-                });
-                _this.parent().addClass('active');
+                            target.classList.add('active');
+                            nav.classList.remove('animate');
+                        });
+                    }
+    
+                    pos = position;
+                    wid = width;
+                }
             });
-            } else {
-            line.animate({
-                left: position.left,
-                width: ((pos - position.left) + wid)
-            }, 300, function() {
-                line.animate({
-                width: width
-                }, 150, function() {
-                nav.removeClass('animate');
-                });
-                _this.parent().addClass('active');
-            });
-            }
-
-            pos = position.left;
-            wid = width;
-        }
         });
 	}
 })
