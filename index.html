@@ -8,13 +8,17 @@
     <script src="./views/SpielplanAlternativ.js"></script>
     <script src="./views/pong/view.js" type="module"></script>
     <script src="./components/navbar.js"></script>
+    <script src="./views/Archiv.js"></script>
 </head>
 <body class="dark">
     <custome-navbar></custome-navbar>
 
     <div id="content">
-        <custome-spielplan></custome-spielplan>
-        <custome-alternativer-spielplan style="display: none;"></custome-alternativer-spielplan>
+        <div id="spielpläne">
+            <custome-spielplan></custome-spielplan>
+            <custome-alternativer-spielplan></custome-alternativer-spielplan>
+        </div>
+        <custome-archiv style="display: none;"></custome-archiv>
         <custome-pong style="display: none;"></custome-pong>
     </div>
 

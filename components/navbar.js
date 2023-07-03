@@ -3,8 +3,8 @@ const navbar_template = /*html*/`
     <nav>
         <div>
             <ul>
-                <li class="active" :view="custome-spielplan">Home</li>
-                <li :view="custome-alternativer-spielplan">Archiv</li>
+                <li class="active" :view="#spielpläne">Home</li>
+                <li :view="custome-archiv">Archiv</li>
                 <li :view="custome-pong">Teste dein können</li>
             </ul>
             <div class="line"></div>
@@ -15,56 +15,56 @@ const navbar_template = /*html*/`
 
     <link rel="stylesheet" href="styles/index.css"/>
     <style>
-    nav {
-        position: relative;
-        padding: 12px;
-        display: flex;
-        align-items: center;
-    }
+        nav {
+            position: relative;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+        }
 
-    nav > div {
-        flex: 1;
-        display: grid;
-        justify-content: center;
-    }
+        nav > div {
+            flex: 1;
+            display: grid;
+            justify-content: center;
+        }
 
-    nav .line {
-        height: 2px;
-        position: relative;
-        bottom: 0;
-        margin: 10px 0 0 0;
-        background: #FF1847; 
-    }
+        nav .line {
+            height: 2px;
+            position: relative;
+            bottom: 0;
+            margin: 10px 0 0 0;
+            background: #FF1847; 
+        }
 
-    nav ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        position: relative;
-    }
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            position: relative;
+        }
 
-    nav ul li {
-        margin: 0 40px 0 0;
-        opacity: .4;
-        transition: all 0.4s ease;
-        cursor: pointer;
-        text-transform: uppercase;
-        display: block;
-        font-weight: 600;
-        letter-spacing: .2em;
-        font-size: 14px;
-    }
+        nav ul li {
+            margin: 0 40px 0 0;
+            opacity: .4;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 600;
+            letter-spacing: .2em;
+            font-size: 14px;
+        }
 
-    nav ul li:hover {
-        opacity: .7; 
-    }
-    nav ul li.active {
-        opacity: 1; 
-    }
-    nav ul li:last-child {
-        margin-right: 0; 
-    }
+        nav ul li:hover {
+            opacity: .7; 
+        }
+        nav ul li.active {
+            opacity: 1; 
+        }
+        nav ul li:last-child {
+            margin-right: 0; 
+        }
     </style>
 </template>
 `
@@ -130,6 +130,7 @@ customElements.define('custome-navbar', class extends HTMLElement {
                             sibling = sibling.nextSibling;
                         }
                     }
+
                     siblings.forEach((el) => {
                         document.querySelector(el.getAttribute(":view")).style.display = "none"
                     })
