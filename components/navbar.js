@@ -1,11 +1,11 @@
 const navbar_template = /*html*/`
-<template id="TEMPLATE_PONG">
+<template id="TEMPLATE_NAVBAR">
     <nav>
         <div>
             <ul>
-                <li class="active">Home</li>
-                <li>Archiv</li>
-                <li>Teste dein können</li>
+                <li class="active" :view="custome-spielplan">Home</li>
+                <li :view="custome-alternativer-spielplan">Archiv</li>
+                <li :view="custome-pong">Teste dein können</li>
             </ul>
             <div class="line"></div>
         </div>
@@ -75,7 +75,7 @@ customElements.define('custome-navbar', class extends HTMLElement {
 
         const shadow = this.attachShadow({ mode: "open" });
         shadow.innerHTML = navbar_template
-        const template = shadow.getElementById("TEMPLATE_PONG").content;
+        const template = shadow.getElementById("TEMPLATE_NAVBAR").content;
         this.shadowRoot.append(template.cloneNode(true))
 
         this.shadowRoot.querySelector("#darkmode").addEventListener("click", this.toggleDarkmode)
@@ -117,6 +117,23 @@ customElements.define('custome-navbar', class extends HTMLElement {
                     const target = e.target
                     let position = target.offsetLeft
                     let width = target.offsetWidth
+
+                    let siblings = []; 
+                    if(target.parentNode) {
+                        let sibling  = target.parentNode.firstChild;
+                    
+                        // collecting siblings
+                        while (sibling) {
+                            if (sibling.nodeType === 1 && sibling !== e) {
+                                siblings.push(sibling);
+                            }
+                            sibling = sibling.nextSibling;
+                        }
+                    }
+                    siblings.forEach((el) => {
+                        document.querySelector(el.getAttribute(":view")).style.display = "none"
+                    })
+                    document.querySelector(target.getAttribute(":view")).style.display = ""
 
                     if(position >= pos) {
                         line.animate({

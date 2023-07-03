@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/index.css"/>
     <script src="./views/Spielplan.js"></script>
     <script src="./views/SpielplanAlternativ.js"></script>
-    <script src="./views/pong/view.js"></script>
+    <script src="./views/pong/view.js" type="module"></script>
     <script src="./components/navbar.js"></script>
 </head>
 <body class="dark">
@@ -14,8 +14,8 @@
 
     <div id="content">
         <custome-spielplan></custome-spielplan>
-        <custome-alternativer-spielplan></custome-alternativer-spielplan>
-        <custome-pong></custome-pong>
+        <custome-alternativer-spielplan style="display: none;"></custome-alternativer-spielplan>
+        <custome-pong style="display: none;"></custome-pong>
     </div>
 
     <style>

@@ -1,3 +1,5 @@
+import { game } from './game.js'
+
 const pong_template = /*html*/`
 <template id="TEMPLATE_PONG">
     <div id="pong">
@@ -9,16 +11,6 @@ const pong_template = /*html*/`
                 <button>Start Game</button>
             </div>
         </div>
-        <script type="module">
-            import loop from './views/pong/game.js'
-            
-            startGame() {
-                requestAnimationFrame(loop)
-                document.querySelector('#pong-overlay').style.display = "none"
-            }
-
-            document.querySelector('#pong-overlay button').addEventListener('click', this.startGame());
-        </script>
         <div style="display: none;">
             <img id="source" src="./views/pong/assets/booooooooooom.png" width="300" height="227" />
             <img id="meme" src="./views/pong/assets/meme.png" />
@@ -59,10 +51,16 @@ customElements.define('custome-pong', class Pong extends HTMLElement {
 
         const shadow = this.attachShadow({ mode: "open" });
         shadow.innerHTML = pong_template
+        const template = shadow.getElementById("TEMPLATE_PONG").content;
+        this.shadowRoot.append(template.cloneNode(true))
+    }
+
+    startGame() {
+        game()
+        this.parentElement.style.display = "none"
     }
 
     connectedCallback() {
-        const t = document.querySelector("custome-pong").shadowRoot.getElementById("TEMPLATE_PONG")
-        this.append(t.cloneNode(true))
+        this.shadowRoot.querySelector('#pong-overlay button').addEventListener('click', this.startGame);
     }
 })
