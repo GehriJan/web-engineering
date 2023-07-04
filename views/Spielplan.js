@@ -1,7 +1,7 @@
 const spielplan_template = /*html*/`
 <template id="TEMPLATE_SPIELPLAN">
     <link rel="stylesheet" href="assets/styles/index.css"/>
-
+    <link rel="stylesheet" href="assets/styles/Spielplan.css"/>
     <div>
         <div id="main_img">
             <img src="./assets/img/pingpong.png">
@@ -33,38 +33,65 @@ const spielplan_template = /*html*/`
         </ul>
 
         <h1>Spielplan</h1>
-        <hr>
-        <p>
-            Falls nur 4 Teams zu Stande kommen, wird folgender Spielstand umgesetzt.
-        </p>
-        <table>
-        <thead>
-        <tr>
-            <td colspan = "3">Spielplan für 4 Teams:</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Team A</td>
-            <td rowspan="2">Halbfinale 1</td>
-            <td id="final" rowspan="4">Grande Finale</td>
-        </tr>
-        <tr>
-            <td>Team B</td>
-        </tr>
-        <tr>
-            <td>Team C</td>
-            <td rowspan="2">Halbfinale 2</td>
-        </tr>
-        <tr>
-            <td>Team D</td>
-        </tr>
-        <tr>
-            <td colspan = "3">Falls 8 Teams zustande kommen: <a href="index.html#Spielplan">Spielplan8</a>.</td>
-        </tr>
-        <tr>
-            <td colspan = "3">Falls 16 Teams zustande kommen: <a href="AlternativerSpielplan16Teilnehmer.html">Spielplan16</a>.</td>
-        </tr>
+        <div id="Spielplan">
+        <h2>Viertelfinale</h2>
+        <div class="Spielrunde">
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="VF1_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="VF1_input2"/>
+            </div>
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="VF2_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="VF2_input2"/>
+            </div>
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="VF3_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="VF3_input2"/>
+            </div>
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="VF4_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="VF4_input2"/>
+            </div>
+        </div>
+        <h2>Halbfinale</h2>
+        <div class="Spielrunde">
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="HF1_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="HF1_input2"/>
+            </div>
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="HF2_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="HF2_input2"/>
+            </div>
+        </div>
+        <h2>Finale</h2>
+        <div class="Spielrunde">
+            <div class="Spiel">
+                <p class="Team1">A: The Ping Pong Masters<br>Nathan Johnson<br>Isabella Rodriguez</p>
+                <p class="Team2">B: The Table Tennis Titans<br>Oliver Smith<br>Sofia Kim</p>
+                <input type="number" id="F_input1"/>
+                <button type="button" class="SpielBtn">Submit!</button>
+                <input type="number" id="F_input2"/>
+            </div>
+        </div>
     </div>
 
     <style>
@@ -101,3 +128,8 @@ customElements.define('custome-spielplan', class extends HTMLElement {
         this.shadowRoot.append(template.cloneNode(true))
     }
 })
+const ergebnisEingabe = /*html*/
+`<template id="ergebnisEingabe">
+    <input type="number" class="leftInput"/>
+    <input type="number" class="rightInput"/>
+</template>`
