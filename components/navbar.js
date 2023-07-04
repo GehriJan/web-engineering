@@ -13,7 +13,7 @@ const navbar_template = /*html*/`
         <button id="darkmode">DARK</button>
     </nav>
 
-    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="assets/styles/index.css"/>
     <style>
         nav {
             position: relative;

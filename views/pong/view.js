@@ -3,7 +3,7 @@ import { game } from './game.js'
 const pong_template = /*html*/`
 <template id="TEMPLATE_PONG">
     <div id="pong">
-        <link rel="stylesheet" href="styles/index.css"/>
+        <link rel="stylesheet" href="assets/styles/index.css"/>
         
         <div>
             <canvas width="750" height="585" id="game"></canvas>

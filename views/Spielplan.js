@@ -1,6 +1,6 @@
 const spielplan_template = /*html*/`
 <template id="TEMPLATE_SPIELPLAN">
-    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="assets/styles/index.css"/>
 
     <div>
         <h2>Turnierbeschreibung</h2>

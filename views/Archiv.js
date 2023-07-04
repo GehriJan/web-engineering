@@ -1,6 +1,6 @@
 const archiv_template = /*html*/`
 <template id="TEMPLATE_ARCHIV">
-    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="assets/styles/index.css"/>
 
     <div id="archiv_main">
         <div>

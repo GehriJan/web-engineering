@@ -1,6 +1,6 @@
 const spielplan2_template = /*html*/`
 <template id="TEMPLATE_SPIELPLAN_2">
-    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="assets/styles/index.css"/>
     
     <h1>Alternativer Spielplan</h1>
     <hr>
