@@ -3,9 +3,9 @@ const navbar_template = /*html*/`
     <nav>
         <div>
             <ul>
-                <li class="active" :view="#spielpläne">Home</li>
-                <li :view="custome-archiv">Archiv</li>
-                <li :view="custome-pong">Teste dein können</li>
+                <li class="active" title="Gehe zu Startseite" :view="#spielpläne">Home</li>
+                <li :view="custome-archiv" title="Zeige Übersicht von vergangenen Turnieren">Archiv</li>
+                <li :view="custome-pong" title="Spiele ein tolles Spiel">Teste dein können</li>
             </ul>
             <div class="line"></div>
         </div>

@@ -1,8 +1,8 @@
 const spielplan2_template = /*html*/`
 <template id="TEMPLATE_SPIELPLAN_2">
-    <Header>
+    <link rel="stylesheet" href="styles/index.css"/>
+    
     <h1>Alternativer Spielplan</h1>
-    </Header>
     <hr>
     <p>
         Falls nur 4 Teams zu Stande kommen, wird folgender Spielstand umgesetzt.
