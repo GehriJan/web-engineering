@@ -29,7 +29,10 @@
     </audio>
 
     <footer>
-        <a href="./views/Impressum.html">Impressum</a>
+        <div>
+            <a href="./views/Impressum.html">Impressum</a>
+            <a href="./views/Impressum.html">Datenschutz</a>
+        </div>
     </footer>
 
     <style>
@@ -44,7 +47,16 @@
         }
 
         footer {
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+            background: var(--container);
+            border-radius: 1rem 1rem 0 0;
+            margin-top: 2rem;
+        }
 
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </body>

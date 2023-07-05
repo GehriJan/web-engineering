@@ -17,6 +17,7 @@ body {
 	color: var(--text);
 	margin: 0;
 	transition: all ease-in-out 0.35s;
+	overflow-x: hidden;
 }
 
 a {
