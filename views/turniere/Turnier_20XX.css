@@ -1,0 +1,58 @@
+body, h1, h2, table {
+    margin: 10px;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Added rounded corners */
+    margin-bottom: 20px;
+}
+
+#t1{
+    align-content: center;
+    width: 50%;
+    margin: 0 auto 20px;
+}
+
+td, th {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+thead:first-child {
+    font-weight: bold;
+    background-color: indianred;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+#Spielplan {
+    margin-top: 40px;
+}
+
+#siegertreppe {
+    text-align: center;
+    margin-top: 2px;
+}
+
+.podiumsplatz {
+    font-size: 40px;
+}
