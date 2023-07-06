@@ -2,14 +2,24 @@
     display: grid;
     grid-template-columns: 1fr 3em 3em 1fr;
     grid-template-rows: 1fr 2em;
+    margin: 0.3em;
+    padding: 0.2em;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: invert(40%);
+
 }
 .Spiel > .Team1{
     grid-column: 1/3;
     grid-row: 1/1;
+    margin: 0;
 }
 .Spiel > .Team2{
     grid-column: -3/-1;
     grid-row: 1/1;
+    margin: 0;
 }
 .Spiel > #VF1_input1{
     grid-column: 1/2;
@@ -19,20 +29,36 @@
     grid-column: -2/-1;
     grid-row: 2/3;
 }
-.Spiel > .SpielBtn{
+.SpielBtn {
     grid-column: 2/-2;
     grid-row: -2/-1;
+    cursor: pointer;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: invert(1);
+}
+.SpielBtn:hover{
+    backdrop-filter: contrast(1);
 }
 .Spiel > * {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: solid black;
-    margin: 0;
     text-align: center;
 }
 .Spielrunde {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+}
+#Spielplan h2{
+    text-align: center;
+}
+#Spielplan .leftInput {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#Spielplan .rightInput {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
 }
