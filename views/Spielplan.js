@@ -3,6 +3,9 @@ const spielplan_template = /*html*/`
     <link rel="stylesheet" href="assets/styles/index.css"/>
 
     <div>
+        <div id="main_img">
+            <img src="../assets/img/pingpong.png">
+        </div>
         <h2>Turnierbeschreibung</h2>
         <p>
             Hallo und herzlich willkommen zu offiziellen Seite des Tischtennis-Grand-Slams 2023. Mit Spannung erwartet freuen wir uns wieder einmal auf schnelle Topspins und gnadenlose Kantenbälle. Am <b>13.07.2024</b> kämpfen die talentiertesten Tischtennisspieler Kontinentaleuropas auf dem prestigeträchtigen <abbr title="Tischtennis-Grand-Slam">TT-GS</abbr> um die Qualifikation für die diesjährige WM. Das Turnier ist wie gewohnt nach dem Brasilianischen K.O.-System aufgebaut.
@@ -67,6 +70,22 @@ const spielplan_template = /*html*/`
     <style>
         h2 {
             text-align: center;
+        }
+
+        #main_img {
+            background-image: url("../assets/img/pingpong.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-height: 30rem;
+        }
+
+        #main_img > img {
+            width: 100%;
+            max-height: 30rem;
+            object-fit: contain;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
         }
     </style>
 </template>

@@ -8,10 +8,10 @@ export function game() {
 
     const config = {
         paddle: {
-            speed: 8
+            speed: 6
         },
         ball: {
-            speed: 4
+            speed: 3
         }
     }
 
