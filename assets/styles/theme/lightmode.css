@@ -1,8 +1,10 @@
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: var(--white);
-    --text: var(--black);    
-    --light_text: #1a1a1a;
+    --bg: #fdfdfd;
+
+    --container: #c5c4c4;
+    
+    --text: var(--black);
   }
 }
 

@@ -124,7 +124,7 @@ const archiv_template = /*html*/`
         }
 
         .archiv > div:hover {
-            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
         }
 
         .archiv:first-of-type > div {

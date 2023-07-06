@@ -1,6 +1,6 @@
 #siegertreppe {
     width: 40%;
-    min-width: 350px;
+    min-width: 250px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 4fr;
     grid-template-columns: 30% 30% 30%;
@@ -12,7 +12,7 @@
     border: medium solid black;
     border-radius: 10px;
     text-align: center;
-    font-size: 5em;
+    font-size: 4em;
     text-shadow: 2px 3px 4px black;
     box-shadow: 5px 5px 10px dimgray;
 }
