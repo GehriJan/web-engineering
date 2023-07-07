@@ -4,7 +4,7 @@ const spielplan_template = /*html*/`
     <link rel="stylesheet" href="assets/styles/tournamentPodium.css"/>
     <div id="body">
     <div id="main_img">
-        <img src="./assets/img/pingpong.png">
+        <img src="./assets/img/pingpong.jpg">
     </div>
     <div id="#Turnierbeschreibung">
     <h2>Turnierbeschreibung</h2>
@@ -118,7 +118,7 @@ const spielplan_template = /*html*/`
     }
 
     #main_img {
-        background-image: url("./assets/img/pingpong.png");
+        background-image: url("./assets/img/pingpong.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
