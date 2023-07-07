@@ -3,37 +3,11 @@ const spielplan2_template = /*html*/`
     <link rel="stylesheet" href="assets/styles/index.css"/>
     
     <h1>Alternativer Spielplan</h1>
-    <hr>
-    <p>
-        Falls nur 4 Teams zu Stande kommen, wird folgender Spielstand umgesetzt.
-    </p>
-    <table>
-    <thead>
     <tr>
-        <td colspan = "3">Spielplan für 4 Teams:</td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Team A</td>
-        <td rowspan="2">Halbfinale 1</td>
-        <td rowspan="4">Grande Finale</td>
+        <td colspan = "3">Falls 4 Teams zustande kommen, klicke <a href="./views/AlternativerSpielplan4Teilnehmer.html">hier.</a></td>
     </tr>
     <tr>
-        <td>Team B</td>
-    </tr>
-    <tr>
-        <td>Team C</td>
-        <td rowspan="2">Halbfinale 2</td>
-    </tr>
-    <tr>
-        <td>Team D</td>
-    </tr>
-    <tr>
-        <td colspan = "3">Falls 8 Teams zustande kommen: <a href="index.html#Spielplan">Spielplan8</a>.</td>
-    </tr>
-    <tr>
-        <td colspan = "3">Falls 16 Teams zustande kommen: <a href="AlternativerSpielplan16Teilnehmer.html">Spielplan16</a>.</td>
+        <td colspan = "3">Falls 16 Teams zustande kommen, klicke <a href="./views/AlternativerSpielplan16Teilnehmer.html">hier.</a></td>
     </tr>
 </template>
 `
