@@ -2,8 +2,8 @@ const spielplan_template = /*html*/`
 <template id="TEMPLATE_SPIELPLAN">
     <Header>
     <h1>Spielplan</h1>
-    <link rel="stylesheet" href="../styles/Spielplan.css"/>
-    <link rel="stylesheet" href="../styles/tournamentPodium.css"/>
+    <link rel="stylesheet" href="assets/styles/Spielplan.css"/>
+    <link rel="stylesheet" href="assets/styles/tournamentPodium.css"/>
     </Header>
     <hr>
     <div id="Spielplan">
