@@ -7,7 +7,7 @@ const archiv_template = /*html*/`
             <a href="./views/turniere/Turnier_2018.html" class="archiv">
                 <div>
                     <p>2018</p>
-                    <p>Was ein Turnier dieses Jahr.</p>
+                    <p>Das erste internationale Tischtennisturnier</p>
                     <p class="chevron">›</p>
                 </div>
             </a>
@@ -15,7 +15,7 @@ const archiv_template = /*html*/`
             <a href="./views/turniere/Turnier_2019.html" class="archiv">
                 <div>
                     <p>2019</p>
-                    <p></p>
+                    <p>Was ein Turnier dieses Jahr</p>
                     <p class="chevron">›</p>
                 </div>
             </a>
@@ -23,7 +23,7 @@ const archiv_template = /*html*/`
             <a href="./views/turniere/Turnier_2020.html" class="archiv">
                 <div>
                     <p>2020</p>
-                    <p></p>
+                    <p>Gunter der Tischtennisgott zerstört alle Teilnehmer</p>
                     <p class="chevron">›</p>
                 </div>
             </a>
@@ -31,7 +31,7 @@ const archiv_template = /*html*/`
             <a href="./views/turniere/Turnier_2021.html" class="archiv">
                 <div>
                     <p>2021</p>
-                    <p></p>
+                    <p>Blinder Helmut doch nicht blind. Hat trotzdem verloren</p>
                     <p class="chevron">›</p>
                 </div>
             </a>
@@ -39,7 +39,7 @@ const archiv_template = /*html*/`
             <a href="./views/turniere/Turnier_2022.html" class="archiv">
                 <div>
                     <p>2022</p>
-                    <p></p>
+                    <p>Eberhart Schmetterball Ball hinterläßt Krater in Sporthalle</p>
                     <p class="chevron">›</p>
                 </div>
             </a>

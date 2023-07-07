@@ -11,7 +11,7 @@ export function game() {
             speed: 6
         },
         ball: {
-            speed: 3
+            speed: 3.5
         }
     }
 

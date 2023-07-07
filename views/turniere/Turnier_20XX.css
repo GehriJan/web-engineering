@@ -56,3 +56,14 @@ main {
 .podiumsplatz {
     font-size: 40px;
 }
+
+.topbar {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    place-items: center;
+    transition: transform ease-in-out 0.25s;
+}
+
+.topbar a {
+    cursor: pointer;
+}
