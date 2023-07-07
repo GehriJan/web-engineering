@@ -1,5 +1,6 @@
 const navbar_template = /*html*/`
 <template id="TEMPLATE_NAVBAR">
+    <svg id="navbarBtn" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
     <nav>
         <div>
             <ul>
@@ -8,9 +9,10 @@ const navbar_template = /*html*/`
                 <li :view="custome-pong" title="Spiele ein tolles Spiel">Teste dein können</li>
             </ul>
             <div class="line"></div>
+            <button id="darkmode1">Darkmode</button>
         </div>
 
-        <button id="darkmode">DARK</button>
+        <button id="darkmode">Darkmode</button>
     </nav>
 
     <link rel="stylesheet" href="assets/styles/index.css"/>
@@ -65,6 +67,55 @@ const navbar_template = /*html*/`
         nav ul li:last-child {
             margin-right: 0; 
         }
+
+        #darkmode1 {
+            display: none;
+        }
+
+        #navbarBtn {
+            display: none;
+            fill: var(--text);
+            font-size: 3rem;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 500px) {
+            nav {
+                display: none;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li,#darkmode1 {
+                margin: 2px 0;
+                text-align: center;
+            }
+
+            .line {
+                display: none;
+            }
+
+            #darkmode1 {
+                display: block;
+            }
+
+            #darkmode {
+                display: none;
+            }
+
+            #navbarBtn {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 500px) {
+            nav {
+                display: flex !important;
+            }
+        }
     </style>
 </template>
 `
@@ -79,6 +130,13 @@ customElements.define('custome-navbar', class extends HTMLElement {
         this.shadowRoot.append(template.cloneNode(true))
 
         this.shadowRoot.querySelector("#darkmode").addEventListener("click", this.toggleDarkmode)
+        this.shadowRoot.querySelector("#darkmode1").addEventListener("click", this.toggleDarkmode)
+        this.shadowRoot.querySelector("#navbarBtn").addEventListener("click", () => {
+            this.shadowRoot.querySelector("nav").style.display = 
+                this.shadowRoot.querySelector("nav").style.display === "none" || this.shadowRoot.querySelector("nav").style.display === "" 
+                    ? "flex" 
+                    : "none"
+        })
     }
 
     toggleDarkmode() {
@@ -87,7 +145,7 @@ customElements.define('custome-navbar', class extends HTMLElement {
         else
             document.body.classList.replace("light", "dark");
         
-        this.textContent = document.body.classList[0].toUpperCase()
+        this.textContent = document.body.classList[0].charAt(0).toUpperCase() + document.body.classList[0].slice(1) + "mode"
     }
 
     connectedCallback() {
@@ -111,6 +169,7 @@ customElements.define('custome-navbar', class extends HTMLElement {
                 e.preventDefault();
                 if(!e.target.parentElement.classList.contains('active') && !nav.classList.contains('animate')) {
                     nav.classList.add('animate');
+                    nav.style.display = "none"
 
                     nav.querySelector('ul li.active').classList.remove('active');
                     
