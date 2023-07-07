@@ -49,58 +49,45 @@ const archiv_template = /*html*/`
 
             <div style="overflow-x: scroll;">
                 <table>
-                    <thead>
-                        <tr>
-                            <td>Platzierung</td>
-                            <td>Name</td>
-                            <td>Punkte</td>
-                            <td>Medallien</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1.</td>
-                            <td>Gunter der Tischtennisgott</td>
-                            <td>5325</td>
-                            <td>23x Gold</td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>Eberhart Schmetterball</td>
-                            <td>3325</td>
-                            <td>4x Gold, 15x Silber</td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>Peter Schnauzer</td>
-                            <td>1225</td>
-                            <td>2x Gold, 12x Silber, 1x Bronze</td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td>Felix treff nix</td>
-                            <td>1024</td>
-                            <td>1x Gold, 12x Silber</td>
-                        </tr>
-                        <tr>
-                            <td>5.</td>
-                            <td>Blinder Helmut</td>
-                            <td>1</td>
-                            <td>1x Bronze</td>
-                        </tr>
-                            <tr>
-                            <td>6.</td>
-                            <td>Armloser Fritz</td>
-                            <td>0</td>
-                            <td>-1x Bronze</td>
-                        </tr>
-                        <tr>
-                            <td>7.</td>
-                            <td>Kranker Max</td>
-                            <td>-5</td>
-                            <td>-10x Bronze</td>
-                        </tr>
-                    </tbody>
+                <thead>
+                    <tr>
+                        <td>Platzierung</td>
+                        <td>Name</td>
+                        <td>Punkte</td>
+                        <td>Medallien</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Tischtennis-Zauberer Zappelfüßchen</td>
+                        <td>5325</td>
+                        <td>23x Gold</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Eberhart Schmetterball</td>
+                        <td>3325</td>
+                        <td>4x Gold, 15x Silber</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Peter Schnauzer</td>
+                        <td>1225</td>
+                        <td>2x Gold, 12x Silber, 1x Bronze</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Felix treff nix</td>
+                        <td>1024</td>
+                        <td>1x Gold, 12x Silber</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Blinder Helmut</td>
+                        <td>1</td>
+                        <td>1x Bronze</td>
+                    </tr>
                 </table>
             </div>
         </div>
