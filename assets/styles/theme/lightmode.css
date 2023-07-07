@@ -1,6 +1,6 @@
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #fdfdfd;
+    --bg: radial-gradient(circle, #ffffff, #f1f1f1, #e3e3e3, #d5d5d5, #c7c7c7);
 
     --container: #c5c4c4;
     
@@ -9,7 +9,7 @@
 }
 
 .light {
-  --bg: #fdfdfd;
+  --bg: radial-gradient(circle, #ffffff, #f1f1f1, #e3e3e3, #d5d5d5, #c7c7c7);
 
   --container: #c5c4c4;
   
